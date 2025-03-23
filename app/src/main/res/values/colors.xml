@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="backgroundColor">#121212</color> <!-- Dark background -->
+    <color name="titleColor">#FFD700</color> <!-- Gold text for title -->
+    <color name="textColor">#FFFFFF</color> <!-- White text for readability -->
+    <color name="textBackground">#333333</color> <!-- Dark grey background for text -->
+    <color name="buttonBackground">#FF5722</color> <!-- Orange button -->
+    <color name="orange">#FFA500</color>
+
+</resources>
