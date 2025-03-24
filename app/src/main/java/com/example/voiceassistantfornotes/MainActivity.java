@@ -93,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
                 public void onBufferReceived(byte[] buffer) {}
 
                 @Override
-                public void onEndOfSpeech() {}
+                public void onEndOfSpeech() {
+                    Toast.makeText(MainActivity.this,"End of Listening..",Toast.LENGTH_SHORT).show();
+                }
 
                 @Override
                 public void onError(int error) {
@@ -104,7 +106,11 @@ public class MainActivity extends AppCompatActivity {
                 public void onResults(Bundle results) {
                     ArrayList<String> matches =results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                     if(matches !=null && !matches.isEmpty()){
-                        editText.setText(matches.get(0));
+                        String currenttxt=editText.getText().toString();
+                        String newtxt=matches.get(0);
+
+                        editText.setText(currenttxt+" "+newtxt);
+                        editText.setSelection(editText.getText().length());
                     }
                 }
 
